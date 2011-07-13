@@ -4,14 +4,15 @@ module JsTreeRails
     include RailsJavaScriptHelpers
 
     def jstree(dom_id, options={})
-      javascript_tag do
-        "jQuery(function(){
-           jQuery('#{format_id(dom_id)}').jstree(
-             #{format_type_to_js(options)}
-           );
-         });
-        "
-      end
+      "<div id=\"#{dom_id.sub(/^#/, '')}\"></div>" +
+        javascript_tag{
+          "jQuery(function(){
+             jQuery('#{format_id(dom_id)}').jstree(
+               #{format_type_to_js(options)}
+             );
+           });
+          "
+        }.html_safe
     end
 
     # Send entire tree structure (-1 forces entire tree. update to make configurable)
