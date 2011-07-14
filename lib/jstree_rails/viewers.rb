@@ -4,7 +4,7 @@ module JsTreeRails
     include RailsJavaScriptHelpers
 
     def jstree(dom_id, options={})
-      "<div id=\"#{dom_id.sub(/^#/, '')}\"></div>" +
+      ("<div id=\"#{dom_id.sub(/^#/, '')}\"></div>" +
         javascript_tag{
           "jQuery(function(){
              jQuery('#{format_id(dom_id)}').jstree(
@@ -12,7 +12,7 @@ module JsTreeRails
              );
            });
           "
-        }.html_safe
+        }).html_safe
     end
 
     # Send entire tree structure (-1 forces entire tree. update to make configurable)

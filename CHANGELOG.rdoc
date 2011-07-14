@@ -1,2 +1,5 @@
+== v0.1.1
+  * Fix for #jstree output to be properly labeled as safe
+
 == v0.1.0
   * Initial release
