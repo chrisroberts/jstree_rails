@@ -1,1 +1,1 @@
-require 'jstree'
+require 'jstree_rails'
