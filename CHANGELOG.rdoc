@@ -1,3 +1,7 @@
+== v0.1.2
+  * Adds .jstree_rails class to all generated divs containing trees
+  * Adds support for defining ajax options when building send link
+
 == v0.1.1
   * Fix for #jstree output to be properly labeled as safe
 
