@@ -21,7 +21,8 @@ module JsTreeRails
         :type => link_args.delete(:method) || 'post',
         :data => {
           :data => RawJS.new("jQuery(#{format_type_to_js(format_id(dom_id))}).jstree('get_json', -1)")
-        }
+        },
+        :data_type => 'script'
       }.merge(ajax_args)
       link_to_function(name, link_args) do |page|
         page << "
