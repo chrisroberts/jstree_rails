@@ -1,3 +1,6 @@
+== v0.1.3
+  * Add data type for ajax helper
+
 == v0.1.2
   * Adds .jstree_rails class to all generated divs containing trees
   * Adds support for defining ajax options when building send link
