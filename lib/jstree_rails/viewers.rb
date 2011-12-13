@@ -11,7 +11,7 @@ module JsTreeRails
                #{format_type_to_js(options)}
              );
            });
-          "
+          ".html_safe
         }).html_safe
     end
 
